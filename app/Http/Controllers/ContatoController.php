@@ -9,6 +9,6 @@ class ContatoController extends Controller
     //
     public function contato()
     {
-        return "Rota contato!";
+        return view('site.contato');
     }
 }

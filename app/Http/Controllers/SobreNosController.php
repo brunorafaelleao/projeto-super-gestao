@@ -9,6 +9,6 @@ class SobreNosController extends Controller
     //funcao pricipal
     public function sobre()
     {
-        return "Rota sobre nós!";
+        return view('site.sobrenos');
     }
 }

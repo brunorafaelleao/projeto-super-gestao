@@ -9,6 +9,6 @@ class PrincipalController extends Controller
     //rota principal
     public function principal()
     {
-        return "Rota principal";
+        return view('site.principal');
     }
 }
