@@ -19,6 +19,9 @@ Route::get('/sobre', [SobreNosController::class, 'sobre'])->name('site.sobre');
 //rota contato
 Route::get('/contato', [ContatoController::class, 'contato'])->name('site.contato');
 
+//rota contato com post
+Route::post('/contato', [ContatoController::class, 'contato'])->name('site.contato');
+
 //agrupamento de rotas restritas
 Route::prefix('/app')->group(function () {
   Route::get('/clientes', function () {
