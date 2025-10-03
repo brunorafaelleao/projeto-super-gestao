@@ -5,31 +5,14 @@
   <li><a href="{{route('site.contato')}}">Contato</a></li>
 </ul>
 --}}
-<!DOCTYPE html>
-<html lang="pt-br">
+@extends('site.layouts.basico')
 
-<head>
-  <title>Super Gestão - Sobre Nós</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="{{asset('css/estilo_basico.css')}}">
+@section('titulo', 'Home')
 
-</head>
+@section('conteudo')
 
-<body>
-  <div class="topo">
-
-    <div class="logo">
-      <img src="{{ asset('img/logo.png') }}">
-    </div>
-
-    <div class="menu">
-      <ul>
-        <li><a href="{{ route('site.index') }}">Principal</a></li>
-        <li><a href="{{ route('site.sobre') }}">Sobre Nós</a></li>
-        <li><a href="{{ route('site.contato') }}">Contato</a></li>
-      </ul>
-    </div>
-  </div>
+  {{-- importar/incluir o topo que vem do arquivo topo.blade.php--}}
+  @include('site.layouts._partials.topo')
 
   <div class="conteudo-destaque">
 
@@ -79,6 +62,4 @@
       </div>
     </div>
   </div>
-</body>
-
-</html>
+@endsection

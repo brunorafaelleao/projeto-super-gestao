@@ -5,31 +5,15 @@
   <li><a href="{{route('site.contato')}}">Contato</a></li>
 </ul>
 --}}
+@extends('site.layouts.basico')
 
-<!DOCTYPE html>
-<html lang="pt-br">
+@section('titulo', 'Sobre nós')
 
-<head>
-  <title>Super Gestão - Sobre Nós</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="{{asset('css/estilo_basico.css')}}">
-</head>
+@section('conteudo')
 
-<body>
-  <div class="topo">
 
-    <div class="logo">
-      <img src="{{ asset('img/logo.png') }}" alt="Logo Super Gestão">
-    </div>
-
-    <div class="menu">
-      <ul>
-        <li><a href="{{ route('site.index') }}">Principal</a></li>
-        <li><a href="{{ route('site.sobre') }}">Sobre Nós</a></li>
-        <li><a href="{{ route('site.contato') }}">Contato</a></li>
-      </ul>
-    </div>
-  </div>
+  {{-- importar/incluir o topo que vem do arquivo topo.blade.php--}}
+  @include('site.layouts._partials.topo')
 
   <div class="conteudo-pagina">
     <div class="titulo-pagina">
@@ -61,7 +45,4 @@
       <img src="{{ asset('img/mapa.png') }}" alt="Mapa da localização">
     </div>
   </div>
-</body>
-
-
-</html>
+@endsection
